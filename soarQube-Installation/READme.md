@@ -57,7 +57,7 @@ sudo chmod -R 777 /opt/sonarqube/
 ### 6. start sonarQube server after creating the link below
 ```sh
 
-sudo ln -s /opt/sonarqube/bin/linux-x86-64/sonar.s /usr/bin/sonar
+sudo ln -s /opt/sonarqube/bin/linux-x86-64/sonar.sh /usr/bin/sonar
 cd
 sonar start
 sonar status
