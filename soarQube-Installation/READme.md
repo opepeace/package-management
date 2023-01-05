@@ -52,10 +52,18 @@ sudo mv sonarqube-* /opt/sonarqube
 ## 5. Grant file permissions for sonar user to start and manage sonarQube
 ```sh
 sudo chown -R sonar:sonar /opt/sonarqube/
-sudo chmod -R 775 /opt/sonarqube/
+sudo chmod -R 777 /opt/sonarqube/
 ```
-### 6. start sonarQube server
+### 6. start sonarQube server after creating the link below
 ```sh
+
+sudo ln -s /opt/sonarqube/bin/linux-x86-64/sonar.s /usr/bin/sonar
+cd
+sonar start
+sonar status
+
+# or use the direct link below
+
 sh /opt/sonarqube/bin/linux-x86-64/sonar.sh start 
 sh /opt/sonarqube/bin/linux-x86-64/sonar.sh status
 ```
@@ -66,7 +74,7 @@ sh /opt/sonarqube/bin/linux-x86-64/sonar.sh status
 # publicIP:9000
 ```sh
 curl -v localhost:9000
-54.236.232.85:9000
+
 default USERNAME: admin
 default password: admin
 ```
